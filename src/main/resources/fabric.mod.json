@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "betterleaves",
+  "version": "${version}",
+
+  "name": "BetterLeaves",
+  "description": "Makes leaves fluffy",
+  "authors": [
+    "paulevs"
+  ],
+  "contact": {
+    "issues": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/betterleaves/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "paulevs.betterleaves.BetterLeaves"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "1.0.0-beta.7.3",
+    "corelib": ">=1.0.0"
+  }
+}
