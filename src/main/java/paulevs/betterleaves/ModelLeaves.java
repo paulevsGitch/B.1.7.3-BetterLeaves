@@ -36,7 +36,7 @@ public class ModelLeaves extends Model {
 			
 			Shape.setColorFromWorld();
 			Shape.setLightFromWorld();
-			Shape.setUV((Shape.getMeta() & 1) == 0 ? uvNormal : uvFir);
+			Shape.setUV(getBlockUV());
 			box.render();
 			
 			boolean snow = hasSnow(Shape.getX(), Shape.getY() + 1, Shape.getZ(), Shape.getTileView());
@@ -89,5 +89,15 @@ public class ModelLeaves extends Model {
 	private boolean hasSnow(int x, int y, int z, TileView world)
 	{
 		return world.getTileId(x, y, z) == Tile.SNOW.id;
+	}
+
+	@Override
+	public UVPair particleUV() {
+		return getBlockUV();
+	}
+	
+	private UVPair getBlockUV()
+	{
+		return (Shape.getMeta() & 1) == 0 ? uvNormal : uvFir;
 	}
 }

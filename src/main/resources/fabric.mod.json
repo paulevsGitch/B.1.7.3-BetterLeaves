@@ -28,6 +28,6 @@
   "depends": {
     "fabricloader": "*",
     "minecraft": "1.0.0-beta.7.3",
-    "corelib": ">=1.0.0"
+    "corelib": ">=1.1.0"
   }
 }
